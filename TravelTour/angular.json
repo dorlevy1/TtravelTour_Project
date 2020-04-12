@@ -1,7 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
 <<<<<<< HEAD
+<<<<<<< HEAD
   "version": 1, 
+=======
+  "version": 1,
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
 =======
   "version": 1,
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c

@@ -1,7 +1,11 @@
 # TravelTour
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
+=======
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
 =======
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c

@@ -2,9 +2,12 @@
   "extends": "tslint:recommended",
   "rules": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "array-type": false,
     "arrow-parens": false,
 =======
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "align": {
       "options": [
         "parameters",
@@ -14,6 +17,9 @@
     "array-type": false,
     "arrow-return-shorthand": true,
     "curly": true,
+<<<<<<< HEAD
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
+=======
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "deprecation": {
       "severity": "warning"
@@ -34,6 +40,10 @@
       "kebab-case"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    "eofline": true,
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
 =======
     "eofline": true,
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
@@ -42,14 +52,20 @@
       "rxjs/Rx"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "interface-name": false,
 =======
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "import-spacing": true,
     "indent": {
       "options": [
         "spaces"
       ]
     },
+<<<<<<< HEAD
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
+=======
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "max-classes-per-file": false,
     "max-line-length": [
@@ -57,7 +73,10 @@
       140
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "member-access": false,
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
 =======
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "member-ordering": [
@@ -72,7 +91,10 @@
       }
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "no-consecutive-blank-lines": false,
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
 =======
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "no-console": [
@@ -97,8 +119,11 @@
       "as-needed"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "object-literal-sort-keys": false,
     "ordered-imports": false,
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
 =======
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "quotemark": [
@@ -106,8 +131,11 @@
       "single"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "trailing-comma": false,
 =======
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "semicolon": {
       "options": [
         "always"
@@ -157,6 +185,9 @@
         "check-typecast"
       ]
     },
+<<<<<<< HEAD
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
+=======
 >>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,

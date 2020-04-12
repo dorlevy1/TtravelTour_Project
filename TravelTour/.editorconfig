@@ -9,6 +9,12 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+[*.ts]
+quote_type = single
+
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
 =======
 [*.ts]
 quote_type = single
