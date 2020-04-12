@@ -1,17 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "version": 1, 
-=======
   "version": 1,
->>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
-=======
-  "version": 1,
->>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
   "newProjectRoot": "projects",
   "projects": {
-    "TravelTour": {
+    "traveltour": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -21,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/TravelTour",
+            "outputPath": "dist/traveltour",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "TravelTour:build"
+            "browserTarget": "traveltour:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "TravelTour:build:production"
+              "browserTarget": "traveltour:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TravelTour:build"
+            "browserTarget": "traveltour:build"
           }
         },
         "test": {
@@ -118,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "TravelTour:serve"
+            "devServerTarget": "traveltour:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "TravelTour:serve:production"
+              "devServerTarget": "traveltour:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "TravelTour"
+  "defaultProject": "traveltour"
 }
