@@ -1,8 +1,20 @@
 {
   "extends": "tslint:recommended",
   "rules": {
+<<<<<<< HEAD
     "array-type": false,
     "arrow-parens": false,
+=======
+    "align": {
+      "options": [
+        "parameters",
+        "statements"
+      ]
+    },
+    "array-type": false,
+    "arrow-return-shorthand": true,
+    "curly": true,
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "deprecation": {
       "severity": "warning"
     },
@@ -21,17 +33,33 @@
       "app",
       "kebab-case"
     ],
+<<<<<<< HEAD
+=======
+    "eofline": true,
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "import-blacklist": [
       true,
       "rxjs/Rx"
     ],
+<<<<<<< HEAD
     "interface-name": false,
+=======
+    "import-spacing": true,
+    "indent": {
+      "options": [
+        "spaces"
+      ]
+    },
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "max-classes-per-file": false,
     "max-line-length": [
       true,
       140
     ],
+<<<<<<< HEAD
     "member-access": false,
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "member-ordering": [
       true,
       {
@@ -43,7 +71,10 @@
         ]
       }
     ],
+<<<<<<< HEAD
     "no-consecutive-blank-lines": false,
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "no-console": [
       true,
       "debug",
@@ -65,13 +96,68 @@
       true,
       "as-needed"
     ],
+<<<<<<< HEAD
     "object-literal-sort-keys": false,
     "ordered-imports": false,
+=======
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "quotemark": [
       true,
       "single"
     ],
+<<<<<<< HEAD
     "trailing-comma": false,
+=======
+    "semicolon": {
+      "options": [
+        "always"
+      ]
+    },
+    "space-before-function-paren": {
+      "options": {
+        "anonymous": "never",
+        "asyncArrow": "always",
+        "constructor": "never",
+        "method": "never",
+        "named": "never"
+      }
+    },
+    "typedef-whitespace": {
+      "options": [
+        {
+          "call-signature": "nospace",
+          "index-signature": "nospace",
+          "parameter": "nospace",
+          "property-declaration": "nospace",
+          "variable-declaration": "nospace"
+        },
+        {
+          "call-signature": "onespace",
+          "index-signature": "onespace",
+          "parameter": "onespace",
+          "property-declaration": "onespace",
+          "variable-declaration": "onespace"
+        }
+      ]
+    },
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-pascal-case"
+      ]
+    },
+    "whitespace": {
+      "options": [
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-separator",
+        "check-type",
+        "check-typecast"
+      ]
+    },
+>>>>>>> 3b717136069f36a60566c4fc80fd06a32164cd6c
     "no-conflicting-lifecycle": true,
     "no-host-metadata-property": true,
     "no-input-rename": true,
