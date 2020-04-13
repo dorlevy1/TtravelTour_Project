@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   background-position: left top;
   height: 600px;
+  margin: 0 50px;
+  margin-top: 2px;
   /* background-size: cover; */
 }
 
