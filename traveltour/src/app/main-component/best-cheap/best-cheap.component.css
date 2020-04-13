@@ -1,0 +1,25 @@
+.best {
+  width: 100%;
+  height: 300px;
+  /* border: 1px solid; */
+  margin-top: 5px;
+  overflow: hidden;
+  display: flex;
+  background-color: #cecece0f;
+}
+
+.best-item {
+  height: 100%;
+  margin: 0 auto;
+  width: 25%;
+  background-color: #f1f1f1;
+  z-index: 3;
+  transform: rotate(15deg);
+}
+
+img {
+  border-radius: 20px;
+  height: 100%;
+  opacity: 0.5;
+  width: 100%;
+}
