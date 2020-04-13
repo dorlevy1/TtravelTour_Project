@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainComponentComponent } from './main-component/main-component.component';
 import { FullSearchComponent } from './main-component/full-search/full-search.component';
 import { BestCheapComponent } from './main-component/best-cheap/best-cheap.component';
+import { WeatherComponent } from './main-component/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BestCheapComponent } from './main-component/best-cheap/best-cheap.compo
     FooterComponent,
     MainComponentComponent,
     FullSearchComponent,
-    BestCheapComponent
+    BestCheapComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule
