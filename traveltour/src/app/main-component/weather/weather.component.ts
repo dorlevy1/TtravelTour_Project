@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { WeatherService } from '../../services/weather.service';
+import { FormGroup, FormControl } from '@angular/forms';
 import { apiService } from 'src/app/services/api.service';
 
 @Component({
@@ -10,6 +10,8 @@ import { apiService } from 'src/app/services/api.service';
 export class WeatherComponent implements OnInit {
   weather: number;
   @Output() city: Object;
+  locationForm: FormGroup;
+  location: Object;
   constructor(private api: apiService) { }
 
   ngOnInit(): void {
@@ -17,9 +19,23 @@ export class WeatherComponent implements OnInit {
       this.city = res;
       console.log(this.city);
     });
+    this.initForm();
   }
 
   onSubmit() {
+    this.api.getCityWeather(this.locationForm.value.countryname).subscribe((res) => {
+      this.location = res;
+      console.log(this.location);
+    });
 
+
+  }
+
+  private initForm() {
+    let countryname = "";
+
+    this.locationForm = new FormGroup({
+      'countryname': new FormControl(countryname)
+    })
   }
 }
