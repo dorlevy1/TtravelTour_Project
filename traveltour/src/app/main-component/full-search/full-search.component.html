@@ -1,13 +1,14 @@
 <div class="row image">
   <div class="col-md-10">
     <div class="container">
-
-      <form>
+      <form *ngFor="let c of city">
         <div class="form-group col-md-11">
-          <input type="email" class="form-control" id="from" placeholder="From">
+          <input type="text" class="form-control" [value]="c.EnglishName" id="from" placeholder="From">
         </div>
         <div class="form-group col-md-11">
-          <input type="password" class="form-control" id="to" placeholder="Your destination">
+          <select class="form-control" name="destination">
+            <option *ngFor="let w of where" value="Choose Your Destination">{{w.name}}</option>
+          </select>
         </div>
         <div class="form-group col-md-11">
           <input type="text" class="form-control" id="departure" placeholder="date">

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,7 +21,7 @@ import { WeatherComponent } from './main-component/weather/weather.component';
     WeatherComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
