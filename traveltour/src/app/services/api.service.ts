@@ -21,5 +21,14 @@ export class apiService {
             'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=Gi3een1ldFiVGxImtGlGbHabpu1EJsuh&q=' +
             location
         );
+
+        /*
+        or ReuvenAPI = Gi3een1ldFiVGxImtGlGbHabpu1EJsuh  
+
+        this gonna give the currect condition..
+        we need to get out the {LocationKey}
+        http://dataservice.accuweather.com/currentconditions/v1/{LocationKey}/historical?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&details=true
+
+        */
     }
 }
