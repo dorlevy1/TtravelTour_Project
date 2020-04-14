@@ -1,19 +1,18 @@
 <div class="row">
-  <div class="weatherDiv col-md-6" *ngFor="let c of city">
+  <div class="weatherDiv col-md-6">
     <div class="background"></div>
     <h1 class="weatherTitle">WeatherInfo</h1>
     <div class="col-6">
 
-      <form (ngSubmit)="onSubmit()">
+      <form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
         <label for="countryName">Enter Your next vacation!</label>
         <div class="flex">
 
           <input type="text" class="form-control" formControlName="countryname">
-          <input type="submit" class="btn btn-success">
+          <button type="submit" class="btn btn-success">Check</button>
+
         </div>
       </form>
     </div>
-    <!-- {{c.EnglishName}} -->
-
   </div>
 </div>

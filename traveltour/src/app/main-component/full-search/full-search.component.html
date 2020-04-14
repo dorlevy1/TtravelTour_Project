@@ -3,22 +3,23 @@
     <div class="container">
       <form *ngFor="let c of city">
         <div class="form-group col-md-11">
-          <input type="text" class="form-control" [value]="c.EnglishName" id="from" placeholder="From">
-        </div>
+          <select class="form-control" name="destination">
+            <option *ngFor="let w of where" [value]="w.name">{{w.name}}</option>
+          </select> </div>
         <div class="form-group col-md-11">
           <select class="form-control" name="destination">
             <option *ngFor="let w of where" [value]="w.name">{{w.name}}</option>
           </select>
         </div>
         <div class="form-group col-md-11">
-          <input type="text" class="form-control" id="departure" placeholder="date">
+          <input type="date" class="form-control" id="departure" placeholder="date">
         </div>
         <div class="form-group col-md-11">
-          <input type="text" class="form-control" id="return" placeholder="Return">
+          <input type="date" class="form-control" id="return" placeholder="Return">
         </div>
 
         <div class="form-group col-md-11">
-          <input type="text" class="form-control" id="passengers" placeholder="Passengers">
+          <input type="num" class="form-control" id="passengers" placeholder="Passengers">
         </div>
         <div class="form-group col-md-11">
           <select id="inputState" class="form-control">
