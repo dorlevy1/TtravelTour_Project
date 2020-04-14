@@ -7,7 +7,7 @@
         </div>
         <div class="form-group col-md-11">
           <select class="form-control" name="destination">
-            <option *ngFor="let w of where" value="Choose Your Destination">{{w.name}}</option>
+            <option *ngFor="let w of where" [value]="w.name">{{w.name}}</option>
           </select>
         </div>
         <div class="form-group col-md-11">

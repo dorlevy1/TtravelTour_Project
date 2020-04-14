@@ -1,5 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { WeatherService } from '../../services/weather.service';
+import { apiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-weather',
@@ -9,10 +10,10 @@ import { WeatherService } from '../../services/weather.service';
 export class WeatherComponent implements OnInit {
   weather: number;
   @Output() city: Object;
-  constructor(private weatherData: WeatherService) { }
+  constructor(private api: apiService) { }
 
   ngOnInit(): void {
-    this.weatherData.getWeather().subscribe((res) => {
+    this.api.getCityWeather().subscribe((res) => {
       this.city = res;
       console.log(this.city);
     });
