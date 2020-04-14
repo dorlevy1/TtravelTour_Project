@@ -5,12 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class WeatherService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getWeather(location = 'tel%20aviv') {
     return this.http.get(
       'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=Gi3een1ldFiVGxImtGlGbHabpu1EJsuh&q=' +
-        location
+      location
     );
+
   }
 }
