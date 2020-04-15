@@ -9,6 +9,7 @@ import { apiService } from 'src/app/services/api.service';
 export class FullSearchComponent implements OnInit {
   @Input() city: Object;
   where: {};
+  defaultCountry: string = "Israel";
   constructor(private api: apiService) { }
 
   ngOnInit(): void {
