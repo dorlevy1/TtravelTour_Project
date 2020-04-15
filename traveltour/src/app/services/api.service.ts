@@ -16,19 +16,15 @@ export class apiService {
     }
 
 
-    getCityWeather(location = 'tel%20aviv') {
+    getCityKey(cityKey = 'tel%20aviv') {
         return this.http.get(
             'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=Gi3een1ldFiVGxImtGlGbHabpu1EJsuh&q=' +
-            location
+            cityKey
         );
 
-        /*
-        or ReuvenAPI = Gi3een1ldFiVGxImtGlGbHabpu1EJsuh  
+    }
 
-        this gonna give the currect condition..
-        we need to get out the {LocationKey}
-        http://dataservice.accuweather.com/currentconditions/v1/{LocationKey}/historical?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&details=true
-
-        */
+    getCityWeather(cityKey: number) {
+        return this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + cityKey + '/historical?apikey=Gi3een1ldFiVGxImtGlGbHabpu1EJsuh&details=true')
     }
 }

@@ -11,31 +11,40 @@ export class WeatherComponent implements OnInit {
   weather: number;
   @Output() city: Object;
   locationForm: FormGroup;
-  location: Object;
+  cityKey: number;
+  Temperature: Object;
   constructor(private api: apiService) { }
 
   ngOnInit(): void {
-    this.api.getCityWeather().subscribe((res) => {
+
+    this.api.getCityKey().subscribe((res) => {
       this.city = res;
       console.log(this.city);
     });
     this.initForm();
+
   }
 
   onSubmit() {
-    this.api.getCityWeather(this.locationForm.value.countryname).subscribe((res) => {
-      this.location = res;
-      console.log(this.location);
-    });
+    let cityKey: number;
+    console.log(this.locationForm);
+    this.api.getCityKey(this.locationForm.value.countryname).subscribe((res) => {
+      cityKey = res[0]['Key'];
+      this.api.getCityWeather(cityKey).subscribe(res => {
+        for (let index = 0; index < 5; index++) {
+          this.Temperature = res[index]['Temperature'];
+          console.log(this.Temperature);
+        }
+      })
 
+    });
 
   }
 
   private initForm() {
     let countryname = "";
-
     this.locationForm = new FormGroup({
-      'countryname': new FormControl(countryname)
+      'countryname': new FormControl(countryname),
     })
   }
 }

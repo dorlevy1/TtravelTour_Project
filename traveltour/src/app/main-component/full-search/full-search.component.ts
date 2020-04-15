@@ -1,6 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WeatherService } from 'src/app/services/weather.service';
-import { FullSearchService } from 'src/app/services/full-search.service';
 import { apiService } from 'src/app/services/api.service';
 
 @Component({
@@ -14,14 +12,11 @@ export class FullSearchComponent implements OnInit {
   constructor(private api: apiService) { }
 
   ngOnInit(): void {
-    this.api.getCityWeather().subscribe((res) => {
+    this.api.getCityKey().subscribe((res) => {
       this.city = res;
-      console.log(this.city);
     });
     this.api.countries().subscribe((res) => {
       this.where = res
-      console.log(this.where);
-
     });
 
 
