@@ -11,7 +11,6 @@ export class WeatherComponent implements OnInit {
   weather: number;
   @Output() city: Object;
   locationForm: FormGroup;
-  cityKey: number;
   Temperature: Object;
   constructor(private api: apiService) { }
 
