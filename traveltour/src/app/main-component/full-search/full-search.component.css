@@ -14,12 +14,25 @@ form {
   padding-bottom: 50px;
   margin-top: 30px;
   width: 40%;
+  border-radius: 30px;
   background-color: rgba(221, 209, 209, 0.596);
 }
 
 input,
 select {
   margin-left: 15px;
+  border-radius: 35px;
+  border: none;
+}
+
+.search {
+  border: 1px solid #02be70;
+  background-color: #02be70;
+  font-size: 23px;
+  font-weight: 600;
+  border-radius: 25px;
+  width: 40%;
+  color: #ffffff;
 }
 
 .center {
