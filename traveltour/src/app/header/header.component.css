@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+/* font-family: 'Abel', sans-serif;
+ */
 .grey-light {
   background-color: rgba(236, 236, 236, 0.3);
   box-shadow: 0rem 1.5rem 3rem -0.9rem #00000091;
@@ -5,6 +9,7 @@
 
 .nav-sizes {
   width: 100%;
+  font-family: 'Abel', sans-serif;
   height: 150px;
   margin: 0;
 
@@ -39,6 +44,7 @@
   padding: 7px;
   border: 1px solid #54abe9;
   margin-top: 10px;
+  /* font-family: 'Abel', sans-serif; */
   border-radius: 35px;
   background: #54abe9;
   color: white;
@@ -57,7 +63,6 @@
 }
 
 .lr {
-  font-size: 24px;
   margin-left: 5px;
   margin-right: 5px;
 }

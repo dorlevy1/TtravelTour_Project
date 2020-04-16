@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+/* font-family: 'Raleway', sans-serif;
+ */
+
 .weatherDiv {
   margin-top: 20px;
   border: 2px solid rgba(128, 128, 128, 0.396);
@@ -11,8 +15,7 @@
 
 .weatherTitle {
   text-align: center;
-  font-size: 56px;
-
+  font-family: 'Raleway', sans-serif;
   padding: 10px;
   width: 50%;
   margin: 10px auto;
@@ -34,12 +37,21 @@
   display: flex;
 }
 
+form {
+  padding-top: 10px;
+}
+
 label {
+  font-family: 'Raleway', sans-serif;
+
   color: white;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 5px;
 }
 
 input {
+
   margin-right: 10px;
   width: 120%;
   border-radius: 35px;
@@ -48,9 +60,10 @@ input {
 }
 
 .checkWeather {
+  font-family: 'Raleway', sans-serif;
+
   border: 1px solid #02be70;
   background-color: #02be70;
-  font-size: 23px;
   font-weight: 600;
   border-radius: 25px;
   width: 40%;
