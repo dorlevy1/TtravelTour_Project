@@ -5,6 +5,10 @@ import { HttpClient } from '@angular/common/http';
     providedIn: 'root',
 })
 export class apiService {
+
+    
+
+    API_KEY: string = '';
     constructor(private http: HttpClient) { }
 
 
@@ -26,5 +30,9 @@ export class apiService {
 
     getCityWeather(cityKey: number) {
         return this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + cityKey + '/historical?apikey=Gi3een1ldFiVGxImtGlGbHabpu1EJsuh&details=true')
+    }
+
+    getMaps(){
+        return this.http.get("")
     }
 }
