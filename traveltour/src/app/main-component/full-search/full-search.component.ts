@@ -7,15 +7,11 @@ import { apiService } from 'src/app/services/api.service';
   styleUrls: ['./full-search.component.css']
 })
 export class FullSearchComponent implements OnInit {
-  @Input() city: Object;
   where: {};
   defaultCountry: string = "Israel";
   constructor(private api: apiService) { }
 
   ngOnInit(): void {
-    this.api.getCityKey().subscribe((res) => {
-      this.city = res;
-    });
     this.api.countries().subscribe((res) => {
       this.where = res
     });

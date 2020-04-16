@@ -11,8 +11,6 @@
 
 .weatherTitle {
   text-align: center;
-  font-size: 56px;
-
   padding: 10px;
   width: 50%;
   margin: 10px auto;
@@ -34,9 +32,15 @@
   display: flex;
 }
 
+form {
+  padding-top: 10px;
+}
+
 label {
   color: white;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-left: 5px;
 }
 
 input {
@@ -50,7 +54,6 @@ input {
 .checkWeather {
   border: 1px solid #02be70;
   background-color: #02be70;
-  font-size: 23px;
   font-weight: 600;
   border-radius: 25px;
   width: 40%;

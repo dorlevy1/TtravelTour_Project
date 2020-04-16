@@ -1,11 +1,12 @@
 <div class="row image">
   <div class="col-md-10">
     <div class="container">
-      <form *ngFor="let c of city">
-        <div class="form-group col-md-11">
+      <form>
+        <div class=" form-group col-md-11">
           <select class="form-control" [(ngModel)]="defaultCountry" name="destination">
             <option *ngFor="let w of where" [value]="w.name">{{w.name}}</option>
-          </select> </div>
+          </select>
+        </div>
         <div class="form-group col-md-11">
           <select class="form-control" name="destination">
             <option *ngFor="let w of where" [value]="w.name">{{w.name}}</option>
