@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-route.model';
 import { FlightsComponent } from './flights/flights.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { ContactComponent } from './contact/contact.component';
+import { MapsComponent } from './main-component/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactComponent } from './contact/contact.component';
     WeatherComponent,
     FlightsComponent,
     WhyUsComponent,
-    ContactComponent
+    ContactComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule, HttpClientModule, ReactiveFormsModule, FormsModule, AppRoutingModule
