@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { apiService } from '../../services/api.service'; 
 
 @Component({
   selector: 'app-maps',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./maps.component.css'],
 })
 export class MapsComponent implements OnInit {
-  API_KEY: string = 'AIzaSyBn7UzMxUwve7XPsRR8hYuHUtcrBxvVgMs';
-  constructor() {}
+ 
 
-  ngOnInit(): void {}
+
+  constructor(private apiService: apiService) {}
+
+  ngOnInit(): void {
+    // this.apiService.getMaps().subscribe((res) => {
+    //   console.log(res);
+    // });
+  }
 }
