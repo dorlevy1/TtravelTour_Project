@@ -92,11 +92,11 @@ a:hover:not(.active) {
 }
 
 .line-loader {
-  width: 17%;
+  width: 80px;
   height: 40%;
   position: absolute;
   top: 35%;
   background-color: black;
-  left: 1%;
+  left: 0px;
   transition: all .5s;
 }
