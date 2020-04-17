@@ -1,5 +1,8 @@
 agm-map {
-  height: 300px;
-  width: 400px;
-
- }
+  height: 350px;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  padding: 0;
+  position: absolute;
+}
