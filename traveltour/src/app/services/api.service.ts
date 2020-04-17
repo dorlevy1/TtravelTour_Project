@@ -22,7 +22,7 @@ export class apiService {
 
     getCityKey(cityKey = 'tel%20aviv') {
         return this.http.get(
-            'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&q=' +
+            'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=SFzekIbPSAyxwXjlzqkPPlYOoOnKAXAT&q=' +
             cityKey
         );
         /*
@@ -39,7 +39,7 @@ export class apiService {
     }
 
     getCityWeather(cityKey: number) {
-        return this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + cityKey + '/historical?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&details=true')
+        return this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + cityKey + '/historical?apikey=SFzekIbPSAyxwXjlzqkPPlYOoOnKAXAT&details=true')
     }
 
     getMaps() {

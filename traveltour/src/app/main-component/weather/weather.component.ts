@@ -1,7 +1,8 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, Input, OnDestroy } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { apiService } from 'src/app/services/api.service';
-import { EventEmitter } from 'protractor';
+import { Datamap } from 'src/app/datamap';
+import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
   selector: 'app-weather',
@@ -11,16 +12,15 @@ import { EventEmitter } from 'protractor';
 export class WeatherComponent implements OnInit {
   weather: number;
   @Output() city: Object;
+  @Output() dataMap: Datamap;
   locationForm: FormGroup;
   Temperature: Object;
-  lat:number=32.045;
-  lng: number=34.77;
-  zoom: number=15;
-  constructor(private api: apiService) { }
+  constructor(private api: apiService, private wService: WeatherService) {
+
+  }
+
 
   ngOnInit(): void {
-this.lat
-this.lng
     this.api.getCityKey().subscribe((res) => {
       this.city = res;
       console.log(this.city);
@@ -33,17 +33,20 @@ this.lng
     let cityKey: number;
     console.log(this.locationForm);
     this.api.getCityKey(this.locationForm.value.countryname).subscribe((res) => {
-       this.lat = res[0]['GeoPosition'].Latitude; 
-        this.lng = res[0]['GeoPosition'].Longitude; 
-        console.log(this.lat);
-        console.log(this.lng);
+      this.dataMap = {
+        latitude: res[0]['GeoPosition'].Latitude,
+        longitude: res[0]['GeoPosition'].Longitude,
+        zoom: 15
+      }
+      this.wService.sendMessage({ 'latitude': this.dataMap.latitude, 'longitude': this.dataMap.longitude })
+
       cityKey = res[0]['Key'];
       this.api.getCityWeather(cityKey).subscribe(res => {
         for (let index = 0; index < 5; index++) {
           this.Temperature = res[index]['Temperature'];
           console.log(this.Temperature);
-       
-        
+
+
         }
       })
 
@@ -57,4 +60,5 @@ this.lng
       'countryname': new FormControl(countryname),
     })
   }
+
 }
