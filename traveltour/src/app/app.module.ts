@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,6 +15,7 @@ import { AppRoutingModule } from './app-route.model';
 import { FlightsComponent } from './flights/flights.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { ContactComponent } from './contact/contact.component';
+import { MapsComponent } from './main-component/maps/maps.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +28,21 @@ import { ContactComponent } from './contact/contact.component';
     WeatherComponent,
     FlightsComponent,
     WhyUsComponent,
-    ContactComponent
+    ContactComponent,
+    MapsComponent,
   ],
   imports: [
-    BrowserModule, HttpClientModule, ReactiveFormsModule, FormsModule, AppRoutingModule
+    BrowserModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AppRoutingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBn7UzMxUwve7XPsRR8hYuHUtcrBxvVgMs',
+    }),
+
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
