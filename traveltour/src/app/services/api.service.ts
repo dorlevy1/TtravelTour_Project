@@ -25,8 +25,8 @@ export class apiService {
             'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&q=' +
             cityKey
         );
+        // http://dataservice.accuweather.com/locations/v1/cities/search?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&q=
 
-        /*
         or ReuvenAPI = Gi3een1ldFiVGxImtGlGbHabpu1EJsuh  
         or DorAPI= oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1
         this gonna give the currect condition..
@@ -34,6 +34,7 @@ export class apiService {
         http://dataservice.accuweather.com/currentconditions/v1/{LocationKey}/historical?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&details=true
         
         */
+
     }
 
     getCityWeather(cityKey: number) {

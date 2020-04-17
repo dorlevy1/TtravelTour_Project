@@ -38,9 +38,9 @@ import { MapsComponent } from './main-component/maps/maps.component';
     FormsModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBn7UzMxUwve7XPsRR8hYuHUtcrBxvVgMs',
-    }),
-
+      apiKey: 'AIzaSyA-Blto9cWPvR7BaUZ4vSEMhwYz9Tw8c64'
+    })
+   
   ],
   providers: [],
   bootstrap: [AppComponent],

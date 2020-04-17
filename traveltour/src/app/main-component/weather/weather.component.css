@@ -69,3 +69,7 @@ input {
   width: 40%;
   color: #ffffff;
 }
+agm-map{
+  height: 400px;
+  width: 300px;
+}
