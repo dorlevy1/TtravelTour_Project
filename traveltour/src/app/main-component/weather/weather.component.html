@@ -15,10 +15,8 @@
       </form>
     </div>
   </div>
-  <div class="col-md-6">
-    <agm-map [(latitude)]="lat" [zoom]="zoom" [(longitude)]="lng">
-      <agm-marker  [(latitude)]="lat" [(longitude)]="lng"></agm-marker>
-    </agm-map>
+  <div class="col-md-6 margin">
+    <app-maps></app-maps>
   </div>
 
 </div>

@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class apiService {
 
-    
+
 
     API_KEY: string = '';
     constructor(private http: HttpClient) { }
@@ -25,6 +25,7 @@ export class apiService {
             'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&q=' +
             cityKey
         );
+        /*
         // http://dataservice.accuweather.com/locations/v1/cities/search?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&q=
 
         or ReuvenAPI = Gi3een1ldFiVGxImtGlGbHabpu1EJsuh  
@@ -41,7 +42,7 @@ export class apiService {
         return this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + cityKey + '/historical?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&details=true')
     }
 
-    getMaps(){
+    getMaps() {
         return this.http.get("")
     }
 }
