@@ -45,4 +45,4 @@ import { MapsComponent } from './main-component/maps/maps.component';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
