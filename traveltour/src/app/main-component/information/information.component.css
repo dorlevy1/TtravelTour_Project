@@ -13,6 +13,33 @@
   margin: 0 auto;
 }
 
+.bgi {
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bgi-precent {
+  background-size: 85% 90%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bgi-precent1 {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.wrap-grey {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(93, 93, 95, 0.26);
+  width: 100%;
+  height: 100%;
+}
+
 .one {
   width: 100%;
   margin: 0 4px;
@@ -34,4 +61,56 @@
   display: flex;
   /* margin-top: 0px; */
   margin: 5px 16.7% 20px 16.7%;
+}
+
+.wrapper {
+  margin: 30px auto 0px auto;
+  height: 100%;
+  overflow: hidden;
+}
+
+.description {
+  height: 150px;
+}
+
+.description2 {
+  height: 110px;
+}
+
+.button {
+  text-align: center;
+}
+
+.blue {
+  background-color: #3569a0 !important;
+  border: 1px solid #3569a0 !important;
+  box-shadow: 0.5rem 1rem 3rem 0rem #000000;
+}
+
+.red {
+  background-color: #9a0909 !important;
+  border: 1px solid #9a0909 !important;
+}
+
+.yellow {
+  background-color: #bdbf1c !important;
+  box-shadow: none !important;
+  border: 1px solid #bdbf1c !important;
+}
+
+
+.orderHotel {
+  font-family: 'Raleway', sans-serif;
+  border: 1px solid #02be70;
+  background-color: #02be70;
+  font-weight: 600;
+  box-shadow: 0.5rem 1rem 3rem 0rem #000000;
+
+  border-radius: 25px;
+  width: 50%;
+  color: #ffffff;
+}
+
+.shuttle {
+  width: 80% !important;
 }
