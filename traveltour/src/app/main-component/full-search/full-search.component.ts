@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { apiService } from 'src/app/services/api.service';
-
 @Component({
   selector: 'app-full-search',
   templateUrl: './full-search.component.html',
@@ -12,6 +11,8 @@ export class FullSearchComponent implements OnInit {
   constructor(private api: apiService) { }
 
   ngOnInit(): void {
+
+
     this.api.countries().subscribe((res) => {
       this.where = res
     });
