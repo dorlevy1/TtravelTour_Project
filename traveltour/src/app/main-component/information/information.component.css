@@ -1,0 +1,28 @@
+.box {
+  height: 250px;
+  width: 250px;
+  padding: 20px;
+  border: 1px solid;
+  margin: 0 auto;
+}
+
+.one {
+  width: 100%;
+  margin: 0 4px;
+}
+
+.two {
+  height: 200px;
+  width: 280px;
+}
+
+.container-box {
+  display: flex;
+  margin: 0 16.5%;
+}
+
+.container-box2 {
+  display: flex;
+  /* margin-top: 0px; */
+  margin: 5px 16.7%;
+}

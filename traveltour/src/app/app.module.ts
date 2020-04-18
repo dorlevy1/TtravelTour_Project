@@ -16,6 +16,7 @@ import { FlightsComponent } from './flights/flights.component';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { MapsComponent } from './main-component/maps/maps.component';
+import { InformationComponent } from './main-component/information/information.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { MapsComponent } from './main-component/maps/maps.component';
     WhyUsComponent,
     ContactComponent,
     MapsComponent,
+    InformationComponent,
   ],
   imports: [
     BrowserModule,
