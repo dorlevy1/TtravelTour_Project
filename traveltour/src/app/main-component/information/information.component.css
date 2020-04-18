@@ -1,8 +1,15 @@
+.row {
+  background-color: #22accc24;
+}
+
 .box {
   height: 250px;
   width: 250px;
+  border-radius: 3px;
+  box-shadow: 0rem 1.5rem 3rem 0.5rem #6d6d6d85;
+  background-color: white;
   padding: 20px;
-  border: 1px solid;
+  border: 1px solid #6d6d6d85;
   margin: 0 auto;
 }
 
@@ -18,11 +25,13 @@
 
 .container-box {
   display: flex;
-  margin: 0 16.5%;
+  margin-top: 20px;
+  margin-left: 16.5%;
+  margin-right: 16.5%;
 }
 
 .container-box2 {
   display: flex;
   /* margin-top: 0px; */
-  margin: 5px 16.7%;
+  margin: 5px 16.7% 20px 16.7%;
 }
