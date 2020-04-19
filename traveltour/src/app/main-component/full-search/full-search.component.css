@@ -4,6 +4,8 @@
   background-repeat: no-repeat;
   background-position: left top;
   height: 600px;
+  border-radius: 30px;
+  box-shadow: 0.1rem 0.28rem 1rem 0.8rem #6d6767a1;
   margin-top: 3px;
   /* background-size: cover; */
 }
