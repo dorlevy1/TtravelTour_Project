@@ -11,6 +11,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
     let pathName = window.location.pathname;
     if (pathName === "/flights") {
       $('.line-loader').css('left', '125px')
@@ -32,6 +33,7 @@ export class HeaderComponent implements OnInit {
     })
     $('#whyus').click(() => {
       $('.line-loader').css('left', '250px')
+
     })
     $('#contact').click(() => {
       $('.line-loader').css('left', '380px')
