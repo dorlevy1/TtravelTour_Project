@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+div.agm-map-container-inner {
+  border-top-right-radius: 30px !important;
+  border-bottom-right-radius: 30px !important;
+}
+
+body {
+  background: #22accc24;
+}
