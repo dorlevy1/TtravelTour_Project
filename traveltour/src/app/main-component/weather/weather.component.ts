@@ -15,6 +15,8 @@ export class WeatherComponent implements OnInit {
   @Output() city: Object;
   @Output() dataMap: Datamap;
   src = "https://developer.accuweather.com/sites/default/files/0";
+
+
   locationForm: FormGroup;
   localDataDay = [];
   constructor(private api: apiService, private wService: WeatherService) {
@@ -23,6 +25,7 @@ export class WeatherComponent implements OnInit {
 
 
   ngOnInit(): void {
+
     this.api.getCityKey().subscribe((res) => {
       this.city = res;
       console.log(this.city);
@@ -32,22 +35,28 @@ export class WeatherComponent implements OnInit {
   }
 
   onSubmit() {
-    $('.weatherTitle').css('margin', '10px 50%');
-    $('form').css('margin', '-100px 0px');
-    $('.height').css('height', '120px');
+    console.log(this.locationForm);
     this.localDataDay = []
     this.title = "Add another City to look";
     let cityKey: number;
-    console.log(this.locationForm);
+    $('.weatherTitle').css('margin', '10px 50%');
+    $('form').css('margin', '-100px 0px');
+    $('.height').css('height', '120px');
+
+
     this.api.getCityKey(this.locationForm.value.countryname).subscribe((res) => {
       this.dataMap = {
         latitude: res[0]['GeoPosition'].Latitude,
         longitude: res[0]['GeoPosition'].Longitude,
         zoom: 15
       }
-      this.wService.sendMessage({ 'latitude': this.dataMap.latitude, 'longitude': this.dataMap.longitude })
+
+      this.wService.sendMessage(
+        { 'latitude': this.dataMap.latitude, 'longitude': this.dataMap.longitude }
+      );
 
       cityKey = res[0]['Key'];
+
       this.api.getCityWeather(cityKey).subscribe(res => {
         for (let index = 0; index < 5; index++) {
 
