@@ -3,7 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { apiService } from 'src/app/services/api.service';
 import { Datamap } from 'src/app/datamap';
 import { WeatherService } from 'src/app/services/weather.service';
-
+declare var $: any;
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
@@ -11,10 +11,12 @@ import { WeatherService } from 'src/app/services/weather.service';
 })
 export class WeatherComponent implements OnInit {
   weather: number;
+  @Input() title: string = "Enter Your next Vacation"
   @Output() city: Object;
   @Output() dataMap: Datamap;
+  src = "https://developer.accuweather.com/sites/default/files/0";
   locationForm: FormGroup;
-  Temperature: Object;
+  localDataDay = [];
   constructor(private api: apiService, private wService: WeatherService) {
 
   }
@@ -30,6 +32,11 @@ export class WeatherComponent implements OnInit {
   }
 
   onSubmit() {
+    $('.weatherTitle').css('margin', '10px 50%');
+    $('form').css('margin', '-100px 0px');
+    $('.height').css('height', '120px');
+    this.localDataDay = []
+    this.title = "Add another City to look";
     let cityKey: number;
     console.log(this.locationForm);
     this.api.getCityKey(this.locationForm.value.countryname).subscribe((res) => {
@@ -43,11 +50,15 @@ export class WeatherComponent implements OnInit {
       cityKey = res[0]['Key'];
       this.api.getCityWeather(cityKey).subscribe(res => {
         for (let index = 0; index < 5; index++) {
-          this.Temperature = res[index]['Temperature'];
-          console.log(this.Temperature);
 
 
+          this.localDataDay.push(res[index]);
+          if (res[index].WeatherIcon > 9) {
+            this.src = "https://developer.accuweather.com/sites/default/files/";
+          }
         }
+        console.log(this.localDataDay);
+
       })
 
     });

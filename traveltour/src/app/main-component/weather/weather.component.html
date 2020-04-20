@@ -2,10 +2,10 @@
   <div class="weatherDiv col-md-6">
     <div class="background"></div>
     <h1 class="weatherTitle">WeatherInfo</h1>
-    <div class="col-6">
+    <div class="col-6 height">
 
       <form [formGroup]="locationForm" (ngSubmit)="onSubmit()">
-        <label for="countryName">Enter Your next vacation!</label>
+        <label for="countryName">{{title}}</label>
         <div class="flex">
 
           <input type="text" class="" formControlName="countryname">
@@ -13,6 +13,17 @@
 
         </div>
       </form>
+    </div>
+    <div class="row">
+      <div class="dfr" *ngFor="let temp of localDataDay">
+
+
+        <div class="col-12 valueTemp" style="position: relative;">
+          <img style="position: absolute;" [src]="src+temp.WeatherIcon+'-s.png'" alt="">
+          <span class="date"> {{temp.LocalObservationDateTime | date:'H:mm'}}
+            || </span> {{temp.Temperature.Metric.Value}}
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-md-6 margin">
