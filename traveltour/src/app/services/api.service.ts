@@ -22,12 +22,12 @@ export class apiService {
 
     getCityKey(cityKey = 'tel%20aviv') {
         return this.http.get(
-            'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=SFzekIbPSAyxwXjlzqkPPlYOoOnKAXAT&q=' +
+            'http://dataservice.accuweather.com/locations/v1/cities/search?apikey=Gi3een1ldFiVGxImtGlGbHabpu1EJsuh&q=' +
             cityKey
         );
         /*
         // http://dataservice.accuweather.com/locations/v1/cities/search?apikey=oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1&q=
-
+or API =SFzekIbPSAyxwXjlzqkPPlYOoOnKAXAT
         or ReuvenAPI = Gi3een1ldFiVGxImtGlGbHabpu1EJsuh  
         or DorAPI= oWiqO6qtRA7n3gTVLO1oKDhRkfuFHYI1
         this gonna give the currect condition..
@@ -39,7 +39,7 @@ export class apiService {
     }
 
     getCityWeather(cityKey: number) {
-        return this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + cityKey + '/historical?apikey=SFzekIbPSAyxwXjlzqkPPlYOoOnKAXAT&details=true')
+        return this.http.get('http://dataservice.accuweather.com/currentconditions/v1/' + cityKey + '/historical?apikey=Gi3een1ldFiVGxImtGlGbHabpu1EJsuh&details=true')
     }
 
     getMaps() {
