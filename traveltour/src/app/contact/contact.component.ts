@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import './../../assets/smtp.js';
+import {MailService} from '@sendgrid/mail'
+// import './../../assets/smtp.js';
+import '../../environments/environment'
+import { from } from 'rxjs';
 declare let Email: any;
 
 @Component({
@@ -13,6 +16,10 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
+sendEmail(){
+
+}
+
 
 
 }
