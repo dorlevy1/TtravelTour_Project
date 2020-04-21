@@ -12,6 +12,7 @@ const appRoute: Routes = [
     { 'path': "flights", 'component': FlightsComponent },
     { 'path': "why-us", 'component': WhyUsComponent },
     { 'path': "contact", 'component': ContactComponent },
+   
 ]
 @NgModule({
     imports: [RouterModule.forRoot(appRoute)],
