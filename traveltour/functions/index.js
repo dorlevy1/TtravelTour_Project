@@ -4,7 +4,10 @@ const nodemailer = require("nodemailer");
 admin.initializeApp();
 require("dotenv").config();
 
-const { SENDER_EMAIL, SENDER_PASSWORD } = process.env;
+const {
+  SENDER_EMAIL,
+  SENDER_PASSWORD
+} = process.env;
 
 exports.sendEmailNotification = functions.firestore
   .document("contact/{docId}")
@@ -40,7 +43,7 @@ exports.sendEmailNotification = functions.firestore
                     <table align="center">
                         <tr>
                           <td align="center">
-                            <h1 style="font-family: Arial;"> Hi, ${data.fullName} 😀</h1>
+                            <h1 style="font-family: Arial;"> Hi, ${data.firstName} ${data.lastName} 😀</h1>
                             <p style="font-family: Arial;">Thanks for contacting us, it's important for <br> us to get back to you as soon as possible</p>
                           </td>
                         </tr>
