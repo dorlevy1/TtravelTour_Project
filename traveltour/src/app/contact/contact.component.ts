@@ -22,7 +22,9 @@ export class ContactComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.initForm();
+   }
 
   sendEmail() {
     this.firebaseService.addContact(this.contactForm.value);
