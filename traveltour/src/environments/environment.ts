@@ -4,10 +4,17 @@
 
 export const environment = {
   production: false,
-
-};
-
-export const SENDGRID_API_KEY='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';
+  firebase: {
+    apiKey: 'AIzaSyAyNuoixvSyPryeckXjULaWtk3ec40bKZg',
+    authDomain: 'traveltour-c859c.firebaseapp.com',
+    databaseURL: 'https://traveltour-c859c.firebaseio.com',
+    projectId: 'traveltour-c859c',
+    storageBucket: 'traveltour-c859c.appspot.com',
+    messagingSenderId: '801067732589',
+    appId: '1:801067732589:web:e0e8e75fa556558a607964',
+    measurementId: 'G-10307DLN88',
+  },
+}; 
 
 /*
  * For easier debugging in development mode, you can import the following file

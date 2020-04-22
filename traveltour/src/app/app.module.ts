@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +20,8 @@ import { WhyUsComponent } from './why-us/why-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { MapsComponent } from './main-component/maps/maps.component';
 import { InformationComponent } from './main-component/information/information.component';
+import { from } from 'rxjs';
+import { PageThanksComponent } from './page-thanks/page-thanks.component';
 
 @NgModule({
   declarations: [
@@ -32,19 +37,22 @@ import { InformationComponent } from './main-component/information/information.c
     ContactComponent,
     MapsComponent,
     InformationComponent,
+    PageThanksComponent,
   ],
-  imports: [
+  imports: [ 
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyA-Blto9cWPvR7BaUZ4vSEMhwYz9Tw8c64'
-    })
-   
+      apiKey: 'AIzaSyA-Blto9cWPvR7BaUZ4vSEMhwYz9Tw8c64',
+    }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule 
+
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
