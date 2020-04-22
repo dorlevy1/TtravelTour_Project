@@ -1,108 +1,161 @@
 <div class="shadoww">
-  <div class="row">
-    <div class="col-md-6 part-left-contact">
-      <div class="col-md-2"></div>
-      <div class="col-md-8 main-contact">
+  <div *ngIf="!submitted; else showSubmitted">
+    <div class="row">
+      <div class="col-md-6 part-left-contact">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 main-contact">
+          <div class="row contact-address">
+            <p class="text-white">
+              <i class="fas fa-map-marker-alt mr-3"></i>
+              Address
+            </p>
+            <p class="text-secondary ml-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </p>
+          </div>
 
-        <div class="row contact-address">
-          <p class="text-white">
-            <i class="fas fa-map-marker-alt mr-3"></i>
-            Address
-          </p>
-          <p class="text-secondary ml-5">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          <div class="row contact-address">
+            <p class="text-white">
+              <i class="fas fa-phone-alt mr-3"></i>
+              Lets Talk
+            </p>
 
-          </p>
+            <p class="text-success ml-5">
+              tel tel tel +97205893939344
+            </p>
+          </div>
+
+          <div class="row contact-address">
+            <p class="text-white">
+              <i class="far fa-envelope mr-3"></i>
+              General Support
+            </p>
+
+            <p class="text-success ml-5">
+              contact@example.com
+            </p>
+          </div>
         </div>
 
-        <div class="row contact-address">
-          <p class="text-white">
-            <i class="fas fa-phone-alt mr-3 "></i>
-            Lets Talk
-          </p>
-
-          <p class="text-success ml-5">
-            tel tel tel +97205893939344
-          </p>
-
-        </div>
-
-        <div class="row contact-address">
-          <p class="text-white">
-            <i class="far fa-envelope mr-3"></i>
-            General Support
-          </p>
-
-
-          <p class="text-success ml-5">
-            contact@example.com
-          </p>
-
-
-
-        </div>
+        <div class="col-md-2"></div>
       </div>
 
-      <div class="col-md-2"></div>
-
+      <div class="col-md-6 part-right-contact">
+        <h1 class="text-center mt-5">Send Us A Message</h1>
+        <form
+          [formGroup]="contactForm"
+          class="p-5"
+     
+        >
+          <div class="form-group">
+            
+            <label for="fullName" hidden class="validate">Full Name</label>
+            <input
+              id="fullName"
+              type="text"
+              class="form-control"
+              placeholder="Enter your full name"
+              formControlName="fullName"
+            />
+            <div
+              *ngIf="
+                contactForm.get('fullName').touched &&
+                contactForm.get('fullName').errors?.required
+              "
+            >
+              <span class="text-danger">The full name is valid</span>
+            </div>
+          </div>
+          <div class="form-group input-field s12">
+            <label for="number" hidden class="validate">Number</label>
+            <input
+              id="number"
+              type="text"
+              class="form-control"
+              placeholder="Enter your number"
+              formControlName="number"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email" hidden class="validate">Email</label>
+            <input
+              id="email"
+              type="email"
+              class="form-control"
+              placeholder="Enter your email"
+              formControlName="email"
+            />
+            <div
+              *ngIf="
+                contactForm.get('email').touched &&
+                contactForm.get('email').errors?.required
+              "
+            >
+              <span class="text-danger">The email is required</span>
+            </div>
+            <div
+              *ngIf="
+                contactForm.get('email').touched &&
+                contactForm.get('email').errors?.email
+              "
+            >
+              <span class="text-danger">The email is invalid</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message" hidden class="validate">Message</label>
+            <textarea
+              id="message"
+              type="text"
+              class="form-control"
+              placeholder="Write us a message"
+              formControlName="message"
+            ></textarea>
+          </div>
+          <div class="form-group text-center submit">
+            <div class="spinner-border text-success" *ngIf= "submitting"  role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+            <input *ngIf="!submitting"
+              type="submit"
+              class="btn btn-success"
+              [disabled]="contactForm.invalid"
+              (click)="sendEmail(contactForm.value)"  
+              value="Send"
+            />
+          </div>
+        </form>
+      </div>
     </div>
-
-
-    <div class="col-md-6 part-right-contact">
-      <h1 class="text-center mt-5">Send Us A Message</h1>
-      <form 
-      [formGroup]="contactForm" 
-      class="p-5 "
-      (ngSubmit)="sendEmail()"
-      >
-        <div class="form-group">
-          <input 
-          type="text" 
-          class="form-control" 
-          id="uname" 
-          placeholder="Enter your first name"
-          formControlName="firstName"
-          >
-        </div>
-
-        <div class="form-group">
-          <input 
-          type="text" 
-          class="form-control" 
-          placeholder="Enter your last name"
-          formControlName="lastName"
-          >
-        </div>
-        <div class="form-group">
-          <input 
-          type="text" 
-          class="form-control" 
-          placeholder="Enter your number"
-          formControlName="number"
-          >
-        </div>
-        <div class="form-group">
-          <input 
-          type="email" 
-          class="form-control" 
-          placeholder="Enter your email"
-          formControlName="email"
-          >
-        </div>
-        <div class="form-group">
-          <textarea 
-          type="password" 
-          class="form-control" 
-          placeholder="Write us a message"
-          formControlName="message"
-          ></textarea>
-        </div>
-        <div class="form-group text-center submit">
-
-          <button type="submit" class="btn search">Submit</button>
-        </div>
-      </form>
-    </div>
-
+    
   </div>
+  <ng-template #showSubmitted>
+    <div id="container">
+      <div id="success-box">
+        <div class="dot"></div>
+        <div class="dot two"></div>
+        <div class="face">
+          <div class="eye"></div>
+          <div class="eye right"></div>
+          <div class="mouth happy"></div>
+        </div>
+        <div class="shadow scale"></div>
+        <div class="message"><h1 class="alert">Success!</h1><p>yay, everything is working.</p></div>
+        <button class="button-box"><h1 class="green">continue</h1></button>
+      </div>
+      <div id="error-box">
+        <div class="dot"></div>
+        <div class="dot two"></div>
+        <div class="face2">
+          <div class="eye"></div>
+          <div class="eye right"></div>
+          <div class="mouth sad"></div>
+        </div>
+        <div class="shadow move"></div>
+        <div class="message"><h1 class="alert">Error!</h1><p>oh no, something went wrong.</div>
+        <button class="button-box"><h1 class="red">try again</h1></button>
+      </div>
+    </div>
+  </ng-template>
 </div>
+

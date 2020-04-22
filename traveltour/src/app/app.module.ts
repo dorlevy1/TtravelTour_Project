@@ -21,7 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MapsComponent } from './main-component/maps/maps.component';
 import { InformationComponent } from './main-component/information/information.component';
 import { from } from 'rxjs';
-import { PageThanksComponent } from './page-thanks/page-thanks.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import { PageThanksComponent } from './page-thanks/page-thanks.component';
     ContactComponent,
     MapsComponent,
     InformationComponent,
-    PageThanksComponent,
+    
   ],
   imports: [ 
     BrowserModule,
