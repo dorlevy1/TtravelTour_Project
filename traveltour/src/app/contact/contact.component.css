@@ -19,7 +19,6 @@
 }
 
 .search {
-
   border: 1px solid #02be70;
   background-color: #02be70;
   font-size: 23px;
@@ -56,3 +55,16 @@
   left: 0;
   background: rgba(0, 0, 0, 0.493);
 }
+.pth {
+  background-color: #f2f6f5;
+  z-index: -1;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+
+
+
+
+

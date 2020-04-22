@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import {
+  FormGroup,
+  FormControl,
+  Validator,
+  FormBuilder,
+  Validators,
+} from '@angular/forms';
+
 import { FirebaseService } from '../services/firebase.service';
-import { environment } from 'src/environments/environment';
-import { Router } from '@angular/router';
-import '../../environments/environment'
-import { from } from 'rxjs';
-declare let Email: any;
+import { Contact } from '../models/contact';
+
 
 @Component({
   selector: 'app-contact',
@@ -15,30 +18,35 @@ declare let Email: any;
 })
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
+  submitted:boolean = false;
+  submitting:boolean = false;
 
   constructor(
-    private http: HttpClient,
-    private firebaseService: FirebaseService,
-    private router: Router
-  ) { }
+    private fb: FormBuilder,
+    private firebaseService: FirebaseService
+  ) {}
 
   ngOnInit(): void {
     this.initForm();
-   }
+  }
 
-  sendEmail() {
-    this.firebaseService.addContact(this.contactForm.value);
-    this.router.navigate(['/']);
+  sendEmail(value: Contact) {
+    this.submitting = true;
+    setTimeout( ()=>{
+      this.firebaseService.addContact(value)
+      this.submitting = false;
+      this.submitted = true;
+    }, 3000);
+
+    
   }
 
   private initForm() {
-    this.contactForm = new FormGroup({
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-      number: new FormControl(''),
-      email: new FormControl(''),
-      message: new FormControl(''),
+    this.contactForm = this.fb.group({
+      fullName: ['', Validators.required],
+      number: [''],
+      email: ['', [Validators.required, Validators.email]],
+      message: [''],
     });
   }
-
 }

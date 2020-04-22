@@ -21,7 +21,10 @@ export class FirebaseService {
       this.firestore
         .collection("contact")
         .add(contact)
-        .then(res => { }, err => reject(err));
+        .then(res => {console.log('Data added');
+         })
+        .catch(err=>console.log(err))
+        
     });
 
   }
