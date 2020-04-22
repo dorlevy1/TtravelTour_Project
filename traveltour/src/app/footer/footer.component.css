@@ -1,11 +1,18 @@
-h6,p{
-  color:#fff;
-  
+h6,
+p {
+  color: #fff;
+
 }
-hr{
-  background:#21d192
+
+hr {
+  background: #21d192
 }
-p>a{
+
+p>a {
   text-decoration: none;
-  color:#21d192;
+  color: #21d192;
+}
+
+footer {
+  min-height: 465px;
 }

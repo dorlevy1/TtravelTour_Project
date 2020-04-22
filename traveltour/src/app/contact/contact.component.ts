@@ -4,7 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { FirebaseService } from '../services/firebase.service';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
-
+import '../../environments/environment'
+import { from } from 'rxjs';
+declare let Email: any;
 
 @Component({
   selector: 'app-contact',
@@ -31,4 +33,10 @@ export class ContactComponent implements OnInit {
     this.firebaseService.addContact(this.contactForm.value);
     this.router.navigate(['/']);
   }
+
+  sendEmail() {
+
+  }
+
+
 }
