@@ -14,29 +14,29 @@ declare let Email: any;
   styleUrls: ['./contact.component.css'],
 })
 export class ContactComponent implements OnInit {
-  contactForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    number: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl(''),
-  });
+  contactForm: FormGroup;
 
   constructor(
     private http: HttpClient,
     private firebaseService: FirebaseService,
     private router: Router
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
-  sendEmail(): void {
+  ngOnInit(): void { }
+
+  sendEmail() {
     this.firebaseService.addContact(this.contactForm.value);
     this.router.navigate(['/']);
   }
 
-  sendEmail() {
-
+  private initForm() {
+    this.contactForm = new FormGroup({
+      firstName: new FormControl(''),
+      lastName: new FormControl(''),
+      number: new FormControl(''),
+      email: new FormControl(''),
+      message: new FormControl(''),
+    });
   }
-
 
 }
