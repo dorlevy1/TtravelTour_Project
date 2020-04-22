@@ -13,16 +13,16 @@ import { Contact } from '../models/contact';
 export class FirebaseService {
   contactCollection: AngularFirestoreCollection<Contact>;
   contact: Observable<Contact>;
-  constructor(private firestore: AngularFirestore) {}
+  constructor(private firestore: AngularFirestore) { }
 
-  addContact(contact:Contact) {
-   
-    return new Promise<any>((resolve, reject) =>{
+  addContact(contact: Contact) {
+
+    return new Promise<any>((resolve, reject) => {
       this.firestore
-          .collection("contact")
-          .add(contact)
-          .then(res => {}, err => reject(err));
-  });
-    
+        .collection("contact")
+        .add(contact)
+        .then(res => { }, err => reject(err));
+    });
+
   }
 }
