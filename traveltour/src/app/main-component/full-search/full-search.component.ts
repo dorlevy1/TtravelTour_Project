@@ -14,6 +14,19 @@ export class FullSearchComponent implements OnInit {
 
   ngOnInit(): void {
 
+    $(function () {
+      $("#datepicker").datepicker({
+        prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+        nextText: '<i class="fa fa-fw fa-angle-right"></i>',
+      });
+    });
+    $(function () {
+      $("#datepicker2").datepicker({
+        prevText: '<i class="fa fa-fw fa-angle-left"></i>',
+        nextText: '<i class="fa fa-fw fa-angle-right"></i>',
+      });
+    });
+
     this.api.countries().subscribe((res) => {
       this.where = res
     });
