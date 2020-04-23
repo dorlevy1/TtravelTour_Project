@@ -7,8 +7,6 @@
 }
 
 .weatherDiv {
-  margin-top: 20px;
-  border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
   width: 100%;
   height: 350px;
@@ -110,8 +108,6 @@ input {
 
 }
 
-.margin {
-  margin-top: 20px;
-}
+.margin {}
 
 app-maps {}
