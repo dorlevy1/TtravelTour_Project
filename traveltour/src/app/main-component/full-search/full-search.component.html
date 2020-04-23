@@ -12,11 +12,16 @@
             <option *ngFor="let w of where" [value]="w.name">{{w.name}}</option>
           </select>
         </div>
-        <div class="form-group col-md-11">
-          <input type="<!--date-->" class="form-control" name="departure" value="Departure">
-        </div>
-        <div class="form-group col-md-11">
-          <input type="<!--date-->" class="form-control" name="return" value="Return">
+        <div class="together">
+
+          <div class="form-group">
+            <input type="<!--date-->" id="datepicker" class="form-control" style="margin-left: 30px;text-align: center;"
+              name="departure" value="Departure">
+          </div>
+          <div class="form-group ">
+            <input type="<!--date-->" style="margin-right: 30px;text-align: center;" class="form-control"
+              id="datepicker2" name="return" value="Return">
+          </div>
         </div>
 
         <div class="form-group col-md-11">
