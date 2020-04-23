@@ -58,13 +58,43 @@
 .pth {
   background-color: #f2f6f5;
   z-index: -1;
-  margin: 20px;
+  margin-top: 32px;
   border-radius: 20px;
-  padding: 40px;
+  padding: 60px;
+  padding-top: 44px;
+  padding-bottom: 44px;
+ 
+ 
+  
+}
+
+.btn-submit{
+  width: 200px;
+  
 }
 
 
+.text-address{
+  color:rgba(204, 204, 204, 0.755)
+}
 
+th,td{
+  color:#fff
+}
+.table{
+  padding: 25px;  
+  border-bottom:0;
+  border-top:0;
+}
 
-
-
+.table td, .table th {
+  padding: .75rem;
+  vertical-align: top;
+  border-top: 0;
+}
+.table thead th{
+  border-bottom: 0;
+}
+td a {
+  color: #02be70;
+}
