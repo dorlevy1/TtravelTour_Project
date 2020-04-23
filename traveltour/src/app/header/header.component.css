@@ -15,6 +15,10 @@
 
 }
 
+.rotate {
+  transform: rotate(-40deg);
+}
+
 .flex {
   display: flex;
 }

@@ -4,12 +4,21 @@
   background-repeat: no-repeat;
   background-position: left top;
   height: 600px;
-  border-radius: 30px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   box-shadow: 0.1rem 0.28rem 1rem 0.8rem #6d6767a1;
   margin-top: 3px;
   /* background-size: cover; */
 }
 
+.together {
+  display: flex;
+
+}
+
+.together>div>input {
+  width: 75%;
+}
 
 form {
   padding-top: 50px;
